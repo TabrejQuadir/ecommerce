@@ -1,0 +1,30 @@
+.shop-category-banner{
+display: block;
+margin: 30px auto;
+width: 82%;
+}
+
+.shopcategory-indexSort{
+    display: flex;
+    margin: 0 170px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shopcategory-indexSort p span{
+font-weight: 600;
+}
+
+.shopCategory-sort{
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid #888;
+}
+
+.shopCategory-products{
+    margin: 20px 170px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    row-gap: 80px;
+    gap: 20px;
+}
