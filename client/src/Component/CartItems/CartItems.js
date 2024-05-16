@@ -1,7 +1,7 @@
 import { useContext } from "react"
 import "./Cartitems.css"
 import { ShopContext } from "../../Context/ShopContext";
-import remove_icon from "../Assest/cart_cross_icon.png"
+import remove_icon from "../Asset/cart_cross_icon.png"
 
 const CartItems = () => {
     const { all_Product, cartItems, removeFromCart , getTotalCartAmount } = useContext(ShopContext);

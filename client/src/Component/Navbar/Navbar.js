@@ -1,6 +1,6 @@
 import './Navbar.css'
-import logo from '../Assest/logo.png';
-import cart_icon from '../Assest/cart_icon.png'
+import logo from '../Asset/logo.png';
+import cart_icon from '../Asset/cart_icon.png'
 import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShopContext } from '../../Context/ShopContext';

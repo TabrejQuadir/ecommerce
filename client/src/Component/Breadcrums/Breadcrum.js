@@ -1,5 +1,5 @@
 import "./Breadcrum.css";
-import arrow_icon from "../Assest/arrow.png";
+import arrow_icon from "../Asset/arrow.png";
 
 
 const Breadcrum = (props) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { ShopContext } from '../Context/ShopContext';
 import './Css/ShopCategory.css'
 import { useContext } from 'react';
-import dropdown_icon from '../Component/Assest/dropdown_icon.png'
+import dropdown_icon from '../Component/Asset/dropdown_icon.png'
 import Item from '../Component/Item/Item';
 
 

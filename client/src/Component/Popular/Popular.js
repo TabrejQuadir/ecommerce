@@ -1,5 +1,5 @@
 import './Popular.css';
-import data_product from '../Assest/data';
+import data_product from '../Asset/data';
 import Item from '../Item/Item';
 
 const Popular = () => {

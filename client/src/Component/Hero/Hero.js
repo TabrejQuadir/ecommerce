@@ -1,7 +1,7 @@
 import './Hero.css';
-import hand_icon from '../Assest/hand_icon.png'
-import arrow_icon from '../Assest/arrow.png'
-import hero_image from "../Assest/hero_image.png"
+import hand_icon from '../Asset/hand_icon.png'
+import arrow_icon from '../Asset/arrow.png'
+import hero_image from "../Asset/hero_image.png"
 const Hero = () => {
     return (
         

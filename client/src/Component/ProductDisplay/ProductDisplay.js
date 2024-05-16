@@ -1,6 +1,6 @@
 import './ProductDisplay.css';
-import Star_Icon from "../Assest/star_icon.png"
-import Star_Dull_Icon from "../Assest/star_dull_icon.png"
+import Star_Icon from "../Asset/star_icon.png"
+import Star_Dull_Icon from "../Asset/star_dull_icon.png";
 import { useContext } from 'react';
 import { ShopContext } from '../../Context/ShopContext';
 

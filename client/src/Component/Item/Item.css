@@ -1,8 +1,9 @@
-.item{
+.item {
     width: 350px;
-    box-shadow: .5px .5px 10px 2px black;
+    box-shadow: 0.5px 0.5px 10px 2px black;
     padding: 3px;
     cursor: pointer;
+    background: linear-gradient(to right, #d47bed, #feb47b); /* Adjust colors as needed */
 }
 
 .item img {
@@ -10,8 +11,9 @@
 }
 
 .item img:hover{
-    transform: scale(.93);
+    transform: scale(.9);
     border-radius: 3%;
+    rotate: 3deg;
 } 
 
 .item p{
@@ -38,6 +40,6 @@
 .item:hover{
     transform: scale(1.02);
     transition: 0.6s;
-    box-shadow: .2px .2px 30px 15px rgb(109, 245, 188);
+    box-shadow: .2px .2px 20px 5px rgb(109, 245, 188);
 }
 

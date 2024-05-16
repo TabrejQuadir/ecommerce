@@ -1,5 +1,5 @@
 import "./ReleatedProducts.css"
-import dataProduct from "../Assest/data";
+import dataProduct from "../Asset/data";
 import Item from "../Item/Item";
 
 const ReleatedProducts = () => {

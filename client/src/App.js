@@ -7,17 +7,15 @@ import ShopCategory from './Pages/ShopCategory';
 import Product from './Pages/Product'
 import Cart from './Pages/Cart';
 import LoginSignUp from './Pages/LoginSignUp';
-import men_banner from './Component/Assest/banner_mens.png'
-import women_banner from './Component/Assest/banner_women.png'
-import kid_banner from './Component/Assest/banner_kids.png'
+import men_banner from "./Component/Asset/banner_mens.png"
+import women_banner from './Component/Asset/banner_women.png'
+import kid_banner from './Component/Asset/banner_kids.png'
 import Footer from './Component/Footer/Footer';
 
 
 
 
 function App() {
-
-
 
 
   return (

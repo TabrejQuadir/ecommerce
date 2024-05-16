@@ -1,9 +1,9 @@
 import React from 'react';
 import './Footer.css';
-import footer_logo from '../Assest/logo.png'
-import instagram from '../Assest/instagram_icon.png'
-import pinetrest from '../Assest/pintester_icon.png'
-import whatshapp from '../Assest/whatsapp_icon.png'
+import footer_logo from '../Asset/logo.png'
+import instagram from '../Asset/instagram_icon.png'
+import pinetrest from '../Asset/pintester_icon.png'
+import whatshapp from '../Asset/whatsapp_icon.png'
 
 const Footer = () => {
     return (

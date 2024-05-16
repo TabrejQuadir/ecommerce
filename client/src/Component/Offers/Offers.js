@@ -1,5 +1,5 @@
 import './Offers.css'
-import excluxve_image from "../Assest/exclusive_image.png"
+import excluxve_image from "../Asset/exclusive_image.png"
 
 const Offers = () => {
   return (
