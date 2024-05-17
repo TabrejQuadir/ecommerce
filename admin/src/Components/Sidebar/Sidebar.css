@@ -7,7 +7,6 @@
     max-width: 250px;
     height: calc(100vh - 80px);
     background: white;
-    /* background-color: gray; */
     background: linear-gradient(to right, #d47bed, #feb47b); 
     box-sizing: border-box; 
     /* overflow-y: auto;  */

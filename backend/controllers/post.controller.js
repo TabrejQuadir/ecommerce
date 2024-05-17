@@ -36,7 +36,7 @@ const addProduct = async (req, res)=>{
 }
 };
 
-//CREATING API FOR ADDING PRODUCTS
+//CREATING API FOR DELETING PRODUCTS
 
 const deleteProduct = async (req, res) => {
     const deletedProduct = await Product.findOneAndDelete({ id: req.body.id });

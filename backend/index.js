@@ -12,8 +12,8 @@ app.use(cors());
 // Database Connection
 mongoose.connect("mongodb+srv://tabrezquadir6:tabrez@cluster0.womhkss.mongodb.net/e-commerce").then(() => {
     console.log("Database Connected");
-}).catch(() => {
-    console.log("Not Connected");
+}).catch((error) => {
+    console.log("Not Connected", error );
 });
 
 //image Storage Engine
