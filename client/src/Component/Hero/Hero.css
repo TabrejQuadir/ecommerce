@@ -1,57 +1,112 @@
-.hero{
- height: 100vh;
- background: linear-gradient(180deg,#fde1ff , #e1ffea22 60%);
- display: flex;
+.hero {
+    height: calc(100vh - 70px); /* Subtracting the height of the navbar */
+    background-color: #fde1ff;
+    display: flex;
 }
 
-.hero_left{
-    flex:1;
+.hero_right img {
+    max-width: 100%;
+    max-height: calc(100% - 70px); /* Adjusting the max-height of the image */
+    height: auto;
+}
+
+.hero_left {
+    flex: 1;
     display: flex;
-    justify-content: center;
     flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
     padding-left: 180px;
     gap: 20px;
-    line-height: 1.1;
+    line-height: 1.2;
 }
 
-.hero_left h2{
-    font-size: 26px;
-    font-weight: 600;
+.hero_left h2 {
+    font-size: 32px;
+    font-weight: 700;
     color: #090909;
 }
 
-.hero_left p{
+.hero_left p {
     color: #171717;
-    font-size: 100px;
-    font-weight: 700;
+    font-size: 64px;
+    font-weight: 900;
+    margin: 0;
 }
 
-.hero_hand_icon{
+.hero_hand_icon {
     display: flex;
+    align-items: center;
     gap: 20px;
-    align-items: center;
 }
-.hero_hand_icon img{
-width: 105px;
+
+.hero_hand_icon img {
+    width: 105px;
 }
-.hero_latest-button{
+
+.hero_latest-button {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     width: 310px;
     height: 70px;
-    border-radius: 70px;
+    border-radius: 35px;
     margin-top: 30px;
     color: white;
     font-size: 22px;
-    font-weight: 500;
-    background:#ff4141 ;
+    font-weight: 600;
+    background: #ff4141;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.hero_right{
+.hero_latest-button:hover {
+    background: #ff3030;
+}
+
+.hero_right {
     flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero_right img {
+    max-width: 100%;
+    max-height: calc(100% - 70px);
+    height: auto;
+    transition: transform 0.5s ease;
+    position: relative;
+    z-index: 1;
+}
+
+/* Gradient overlay effect */
+.hero_right::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2;
+}
+
+.hero_right:hover::after {
+    opacity: 0.8;
+}
+
+/* Parallax effect on hover */
+.hero_right:hover img {
+    transform: scale(1.05);
+}
+
+/* Parallax effect on overlay */
+.hero_right:hover::after {
+    transform: translateX(-3%) translateY(-3%);
 }
