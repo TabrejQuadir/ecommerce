@@ -3,7 +3,8 @@
     justify-content: space-around;
     padding: 16px;
     box-shadow: 0px 1px 3px -2px black;
-    background-color: rgb(162, 191, 167);
+    /* background-color: rgba(185, 162, 191, 0.525); */
+    background: linear-gradient(to right, #ed7bb8ad, #feb47b67); /* Adjust colors as needed */
     height: 60px;
 }
 

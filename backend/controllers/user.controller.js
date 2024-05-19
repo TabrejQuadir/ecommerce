@@ -37,10 +37,11 @@ const signUp = async (req, res) => {
         const data = {
             user: {
                 id: user.id,
+                username: user.name, 
             },
-        };
+        }
 
-        const token = jwt.sign(data, process.env.JWT_SECRET);
+        const token = jwt.sign(data, process.env.JWT_SECRET, { expiresIn: '1h' });
 
         // Send response
         res.json({
@@ -75,15 +76,17 @@ const login = async (req, res) => {
         const data = {
             user: {
                 id: user.id,
+                username:user.name,
             },
         };
 
-        const token = jwt.sign(data, process.env.JWT_SECRET);
+        const token = jwt.sign(data, process.env.JWT_SECRET, { expiresIn: '1h' });
 
         // Send response
         res.json({
             success: true,
             token,
+            user
         });
     } catch (err) {
         console.error(err.message);
