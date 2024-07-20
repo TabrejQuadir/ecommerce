@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
+const jwt = require("jsonwebtoken")
 require('dotenv').config();
 
 const postRoute = require("./routes/post.route.js");
@@ -46,6 +47,7 @@ app.post("/upload", upload.single("product"), (req, res) => {
         image_url: `${req.protocol}://${req.get('host')}/images/${req.file.filename}`
     });
 });
+
 
 // Routes
 app.use('/api/post', postRoute);
