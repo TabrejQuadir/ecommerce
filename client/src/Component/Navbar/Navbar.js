@@ -7,7 +7,7 @@ import { ShopContext } from '../../Context/ShopContext';
 import { jwtDecode } from 'jwt-decode';
 
 const Navbar = () => {
-  const [menu, setMenu] = useState("");
+  const [menuActive, setMenuActive] = useState(false);
   const { getTotalCartItems } = useContext(ShopContext);
   const [username, setUsername] = useState(null);
 
@@ -30,32 +30,30 @@ const Navbar = () => {
         <div className='nav_logo'>
           <img src={logo} alt="Shopper Logo" />
           <p>
-            <Link to={"/"} style={{ textDecoration: "none", color:"black"}}>SHOPPER</Link>
+            <Link to={"/"} style={{ textDecoration: "none", color: "white" }}>SHOPPER</Link>
           </p>
         </div>
 
-        <ul className='nav_menu'>
-          <li onClick={() => { setMenu("shop") }}>
-            <Link style={{ textDecoration: "none", color: "yellow" }} to="/">Shop</Link>
-            {menu === "shop" ? <hr /> : null}</li>
 
-          <li onClick={() => { setMenu("mens") }}>
-            <Link style={{ textDecoration: "none", color: "yellow" }} to="/mens">Mens</Link>
-            {menu === "mens" ? <hr /> : null}</li>
-
-          <li onClick={() => { setMenu("womens") }}>
-            <Link style={{ textDecoration: "none", color: "yellow" }} to="/womens">Women</Link>
-            {menu === "womens" ? <hr /> : null}</li>
-
-          <li onClick={() => { setMenu("kids") }}>
-            <Link style={{ textDecoration: "none", color: "yellow" }} to="/kids">Kids</Link>
-            {menu === "kids" ? <hr /> : null}</li>
+        <ul className={`nav_menu ${menuActive ? 'active' : ''}`}>
+          <li>
+            <Link style={{ textDecoration: "none", color: "yellow" }} to="/" onClick={() => setMenuActive(false)}>Shop</Link>
+          </li>
+          <li>
+            <Link style={{ textDecoration: "none", color: "yellow" }} to="/mens" onClick={() => setMenuActive(false)}>Mens</Link>
+          </li>
+          <li>
+            <Link style={{ textDecoration: "none", color: "yellow" }} to="/womens" onClick={() => setMenuActive(false)}>Women</Link>
+          </li>
+          <li>
+            <Link style={{ textDecoration: "none", color: "yellow" }} to="/kids" onClick={() => setMenuActive(false)}>Kids</Link>
+          </li>
         </ul>
 
         <div className='nav_login_cart'>
-          {localStorage.getItem("auth-token") ? (
+        {localStorage.getItem("auth-token") ? (
             <>
-              <span className='nav_username'>Hello, {username}</span>
+              <span className='nav_username'>Hii {username}</span>
               <button onClick={handleLogout}>Logout</button>
             </>
           ) : (
@@ -64,6 +62,13 @@ const Navbar = () => {
           <Link to="/cart"><img src={cart_icon} alt="Cart Icon" /></Link>
           <div className='nav_cart_count'>{getTotalCartItems()}</div>
         </div>
+
+        <div className={`nav_toggle ${menuActive ? 'active' : ''}`} onClick={() => setMenuActive(!menuActive)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
       </div>
     </>
   );
