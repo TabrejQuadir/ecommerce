@@ -1,33 +1,40 @@
-.NewsLetter{
+.NewsLetter {
     width: 65%;
-    height:40vh;
-    display: flex;align-items: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
     margin: auto;
     padding: 0px 140px;
     margin-bottom: 150px;
-    /* background: linear-gradient(180deg, #fde1ff 0deg, #e1ffea22 60deg); */
-    background: linear-gradient(180deg , #fde1ff 0%, #e1ffea22 60%);
+    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
     gap: 30px;
 }
-.NewsLetter h1{
-    color:#454545;
+
+.NewsLetter h1 {
+    color: #454545;
     font-size: 55px;
     font-weight: 600;
 }
-.NewsLetter p{
-color:#454545;
-font-size: 20px;
+
+.NewsLetter p {
+    color: #454545;
+    font-size: 20px;
 }
-.NewsLetter div{
-    display: flex;align-items: center;justify-content: center;
+
+.NewsLetter div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: white;
-    width: 730px;height: 70px;
-     border-radius: 80px;
-     border: 1px solid #e3e3e3;
+    width: 730px;
+    height: 70px;
+    border-radius: 80px;
+    border: 1px solid #e3e3e3;
 }
-.NewsLetter input{
+
+.NewsLetter input {
     width: 500px;
     margin-left: 30px;
     border: none;
@@ -36,11 +43,157 @@ font-size: 20px;
     font-family: Poppins;
     font-size: 16px;
 }
-.NewsLetter div button{
-width: 200px;height: 70px;border-radius: 80px;
-background: black;
-color: white;
-font-size: 16px;
-cursor: pointer;
+
+.NewsLetter div button {
+    width: 200px;
+    height: 70px;
+    border-radius: 80px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
 }
 
+@media (min-width: 992px) and (max-width: 1200px) {
+    .NewsLetter {
+        width: 65%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        padding: 0px 140px;
+        margin-bottom: 150px;
+        background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+        gap: 30px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .NewsLetter {
+        width: 65%;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        padding: 0px 140px;
+        margin-bottom: 150px;
+        background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+        gap: 25px;
+    }
+
+    .NewsLetter h1 {
+        font-size: 45px;
+    }
+
+    .NewsLetter p {
+        font-size: 18px;
+    }
+
+    .NewsLetter div {
+        width: 700px;
+        height: 60px;
+        border-radius: 80px;
+        border: 1px solid #e3e3e3;
+    }
+
+    .NewsLetter input {
+        width: 450px;
+        margin-left: 28px;
+    }
+
+    .NewsLetter div button {
+        width: 175px;
+        height: 62px;
+        border-radius: 80px;
+        background: black;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .NewsLetter {
+        width: 65%;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        padding: 0px 140px;
+        margin-bottom: 150px;
+        background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+        gap: 25px;
+    }
+
+    .NewsLetter h1 {
+        font-size: 35px;
+    }
+
+    .NewsLetter p {
+        font-size: 16px;
+    }
+
+    .NewsLetter div {
+        width: 400px;
+        height: 50px;
+    }
+
+    .NewsLetter input {
+        width: 400px;
+        margin-left: 28px;
+    }
+
+    .NewsLetter div button {
+        width: 150px;
+        height: 50px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .NewsLetter {
+        width: 65%;
+        height: 30vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin: auto;
+        padding: 20px 40px;
+        margin-bottom: 80px;
+        background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+        gap: 10px;
+    }
+
+    .NewsLetter h1 {
+        font-size: 22px;
+    }
+
+    .NewsLetter p {
+        font-size: 13px;
+    }
+
+    .NewsLetter div {
+        width: 230px;
+        height: 40px;
+        border: 1px solid rgb(180, 26, 175);
+    }
+
+    .NewsLetter input {
+        width: 115px;
+        margin-left: 30px;
+        padding-left: 0px;
+    }
+
+    .NewsLetter div button {
+        width: 116px;
+        height: 42px;
+        font-size: 11px;
+    }
+}

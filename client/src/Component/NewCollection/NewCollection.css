@@ -2,7 +2,7 @@
     align-items: center;
     flex-direction: column;
     gap: 10px;
-   margin-bottom:100px ;
+    margin-bottom:100px ;
     }
     
     .NewCollection h1{
@@ -25,3 +25,57 @@
         margin-top: 50px;
         gap: 30px;
     }
+
+    @media (min-width: 768px) and (max-width: 992px) { 
+        .NewCollection h1{
+            font-size: 34px;
+        }
+
+        .NewCollection hr{
+            width: 250px;
+        }
+
+        .Collection{
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            margin-top: 50px;
+            gap: 30px;
+        }
+     }
+
+     @media (min-width: 576px) and (max-width: 768px) { 
+        .NewCollection h1{
+            font-size: 34px;
+        }
+
+        .NewCollection hr{
+            width: 250px;
+        }
+
+        .Collection{
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            margin-top: 50px;
+            gap: 30px;
+        }
+      }
+
+      @media (max-width: 576px) { 
+        .NewCollection{
+            margin-bottom: 50px;
+        }
+        .NewCollection h1{
+            font-size: 28px;
+        }
+
+        .NewCollection hr{
+            width: 220px;
+        }
+
+        .Collection{
+            display: grid;
+            grid-template-columns: 1fr 1fr ;
+            margin-top: 28px;
+            gap: 15px;
+        }
+      }
