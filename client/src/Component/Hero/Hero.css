@@ -222,6 +222,9 @@
  }
 
  @media (max-width: 576px) { 
+    .hero {
+        height: calc(89vh - 80px);
+    }
     .hero_right img {
         max-width: 100%;
         max-height: calc(100% - 70px);
