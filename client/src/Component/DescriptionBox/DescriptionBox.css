@@ -1,31 +1,272 @@
-.descriptionbox{
-    margin: 120px 170px;
+/* Container Styling */
+.descriptionbox {
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 30px;
+    background: linear-gradient(135deg, #f3f4f6, #e2e5e8);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.descriptionbox-navigator{
+/* Hover Effect for Container */
+.descriptionbox:hover {
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+}
+
+/* Navigator Styling */
+.descriptionbox-navigator {
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.descriptionbox-nav-box{
+/* Nav Box Styling */
+.descriptionbox-nav-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
-    width: 171px;height: 70px;
-    font-weight: 600;
-    border: 1px solid #d0d0d0;
+    font-size: 18px;
+    width: 220px;
+    height: 70px;
+    font-weight: 700;
+    background: #e0e0e0;
+    color: #666;
+    border-radius: 15px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.descriptionbox-nav-box.fade{
-    background: #FBFBFB;
-    color: #555;
-} 
+/* Selected State Styling */
+.descriptionbox-nav-box.selected {
+    background: linear-gradient(to right, #ff6f61, #de2d7f);
+    color: #ffffff;
+    border-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+}
 
-.descriptionbox-description{
+/* Hover and Fade Effects */
+.descriptionbox-nav-box:hover {
+    background: linear-gradient(to right, #ff7f7f, #d03d7f);
+    border-color: #ccc;
+    transform: scale(1.05);
+}
+
+.descriptionbox-nav-box.fade {
+    background: #e0e0e0;
+    color: #666;
+}
+
+.descriptionbox-nav-box.fade:hover {
+    background: linear-gradient(to right, #ff7f7f, #d03d7f);
+    border-color: #ccc;
+    transform: scale(1.05);
+}
+
+/* Description and Reviews Styling */
+.descriptionbox-description,
+.descriptionbox-reviews {
+    display: none;
+}
+
+.descriptionbox-description.active,
+.descriptionbox-reviews.active {
     display: flex;
     flex-direction: column;
-    gap: 25px;
-    border: 1px solid #D0d0d0;
-    padding: 48px;
-    padding-bottom: 70px;
+    gap: 20px;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Reviews Section Styling */
+.review {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-left: 5px solid #ff6f61;
+}
+
+.review:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+.review:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.review-author {
+    font-weight: 600;
+    color: #ff6f61;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.review-content {
+    color: #333;
+}
+
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .descriptionbox {
+        margin: 120px 100px 120px 170px;
+    }
+
+    .descriptionbox-nav-box {
+        font-size: 14px;
+        width: 150px;
+        height: 60px;
+    }
+
+    .descriptionbox-description {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid #D0d0d0;
+        padding: 40px;
+        padding-bottom: 60px;
+        font-size: 14px;
+    }
+
+    .descriptionbox-description,
+    .descriptionbox-reviews {
+        display: none;
+    }
+
+    .descriptionbox-description.active,
+    .descriptionbox-reviews.active {
+        gap: 18px;
+        padding: 20px;
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .descriptionbox {
+        margin: 100px 80px 80px 100px;
+    }
+
+    .descriptionbox-nav-box {
+        font-size: 13px;
+        width: 140px;
+        height: 55px;
+    }
+
+    .descriptionbox-description {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border: 1px solid #D0d0d0;
+        padding: 40px;
+        padding-bottom: 60px;
+        font-size: 12px !important;
+        line-height: 1.8 !important;
+    }
+
+    .descriptionbox-description,
+    .descriptionbox-reviews {
+        display: none;
+    }
+
+    .descriptionbox-description.active,
+    .descriptionbox-reviews.active {
+        gap: 18px;
+        padding: 16px;
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+    .descriptionbox {
+        margin: 80px 60px 60px 60px;
+    }
+
+    .descriptionbox-nav-box {
+        font-size: 12px;
+        width: 100px;
+        height: 50px;
+    }
+
+    .descriptionbox-description {
+        display: flex;
+        flex-direction: column;
+        gap: 8px !important;
+        border: 1px solid #D0d0d0;
+        padding: 40px;
+        padding-bottom: 60px;
+        font-size: 11px !important;
+        line-height: 1.8 !important;
+    }
+
+    .descriptionbox-description,
+    .descriptionbox-reviews {
+        display: none;
+    }
+
+    .descriptionbox-description.active,
+    .descriptionbox-reviews.active {
+        gap: 10px !important;
+        padding: 10px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .descriptionbox {
+        margin: 40px 30px;
+    }
+
+    .descriptionbox-nav-box {
+        font-size: 11px;
+        width: 85px;
+        height: 40px;
+        border-radius: 12px;
+
+    }
+
+    .descriptionbox-description {
+        display: flex;
+        flex-direction: column;
+        gap: 8px !important;
+        border: 1px solid #D0d0d0;
+        padding: 40px;
+        padding-bottom: 60px;
+        font-size: 9px !important;
+        line-height: 1.7 !important;
+    }
+
+    .descriptionbox-description,
+    .descriptionbox-reviews {
+        display: none;
+    }
+
+    .descriptionbox-description.active,
+    .descriptionbox-reviews.active {
+        gap: 12px !important;
+        padding: 18px;
+        font-size: 8px;
+    }
+
+    .review {
+        padding: 12px;
+    }
+    .review-author {
+        margin-bottom: 4px;
+        font-size: 12px;
+    }
 }
