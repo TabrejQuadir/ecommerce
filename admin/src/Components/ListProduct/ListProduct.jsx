@@ -7,7 +7,7 @@ const ListProduct = () => {
   const [allProducts, setallProducts] = useState([]);
 
   const fetchInfo = async ()=>{
-    await fetch('http://localhost:4000/api/post/allproducts')
+    await fetch('https://ecommerce-greatstack-backendd.onrender.com/api/post/allproducts')
     .then((res)=>res.json())
     .then((data)=>{setallProducts(data)});
   }
@@ -18,7 +18,7 @@ const ListProduct = () => {
 
   const remove_product = async (id) => {
     try {
-      await axios.post('http://localhost:4000/api/post/removeproduct', {
+      await axios.post('https://ecommerce-greatstack-backendd.onrender.com/api/post/removeproduct', {
         id: id
       }, {
         headers: {

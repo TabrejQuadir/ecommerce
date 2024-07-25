@@ -31,7 +31,7 @@ const AddProduct = () => {
     formData.append("product", image); // Use the same field name as in multer middleware
   
     try {
-      const uploadResponse = await axios.post('http://localhost:4000/upload', formData, {
+      const uploadResponse = await axios.post('https://ecommerce-greatstack-backendd.onrender.com/upload', formData, {
         headers: {
           'Accept': 'application/json'
         }
@@ -42,7 +42,7 @@ const AddProduct = () => {
         product.image = responseData.image_url;
         console.log(product);
         
-        const addProductResponse = await axios.post('http://localhost:4000/api/post/addproduct', product, {
+        const addProductResponse = await axios.post('https://ecommerce-greatstack-backendd.onrender.com/api/post/addproduct', product, {
           headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
