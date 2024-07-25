@@ -16,7 +16,7 @@ const LoginSignUp = () => {
   const login = async () => {
     console.log("Login Executed", formData);
     let responseData;
-    await fetch('http://localhost:4000/api/auth/signin', {
+    await fetch('https://ecommerce-greatstack-backendd.onrender.com/api/auth/signin', {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -36,7 +36,7 @@ const LoginSignUp = () => {
   const signUp = async () => {
     console.log("Sign Up Executed", formData);
     let responseData;
-    await fetch('http://localhost:4000/api/auth/signup', {
+    await fetch('https://ecommerce-greatstack-backendd.onrender.com/api/auth/signup', {
       method: "POST",
       headers: {
         Accept: "application/json",

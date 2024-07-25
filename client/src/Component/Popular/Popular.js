@@ -7,7 +7,7 @@ const Popular = () => {
   const [popularInWomen , setPopupalrInWomen]= useState([]);
 
   useEffect(()=>{
-    fetch("http://localhost:4000/api/post/popularinwomen")
+    fetch("https://ecommerce-greatstack-backendd.onrender.com/api/post/popularinwomen")
     .then((res)=> res.json())
     .then((data)=> setPopupalrInWomen(data))
   },[])

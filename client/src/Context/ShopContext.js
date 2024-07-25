@@ -15,7 +15,7 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
     useEffect(() => {
-        fetch('http://localhost:4000/api/post/allproducts')
+        fetch('https://ecommerce-greatstack-backendd.onrender.com/api/post/allproducts')
             .then((res) => res.json())
             .then((data) => setAll_product(data));
     }, []);
@@ -24,7 +24,7 @@ const ShopContextProvider = (props) => {
         // Fetch cart data if user is logged in
         const authToken = localStorage.getItem('auth-token');
         if (authToken) {
-            fetch("http://localhost:4000/api/post/getcartdata", {
+            fetch("https://ecommerce-greatstack-backendd.onrender.com/api/post/getcartdata", {
                 method: "GET",
                 headers: {
                     "auth-token": authToken,
@@ -42,7 +42,7 @@ const ShopContextProvider = (props) => {
         setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }));
         const authToken = localStorage.getItem('auth-token');
         if (authToken) {
-            fetch("http://localhost:4000/api/post/addtocart", {
+            fetch("https://ecommerce-greatstack-backendd.onrender.com/api/post/addtocart", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
@@ -61,7 +61,7 @@ const ShopContextProvider = (props) => {
         setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) - 1 }));
         const authToken = localStorage.getItem('auth-token');
         if (authToken) {
-            fetch("http://localhost:4000/api/post/removefromcart", {
+            fetch("https://ecommerce-greatstack-backendd.onrender.com/api/post/removefromcart", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
